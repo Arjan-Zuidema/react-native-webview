@@ -54,6 +54,14 @@ yarn windows
 
 The Windows example app will be built, the Metro bundler will launch, and the example app will be installed and started.
 
+### Testing with Fabric
+
+To run the example with Fabric some extra steps are needed:
+
+#### For iOS/MacOs:
+
+The `pod install --project-directory=...` needs to be prefixed with `RCT_NEW_ARCH_ENABLED=1`. But doing so will fail. To work around this move to the `example/ios` or `example/macos` directory and execute `RCT_NEW_ARCH_ENABLED=1 pod install`. This will install the required pods with Fabric.
+
 ### Testing in a new `react-native init` project
 
 In a new `react-native init` project, do this:
